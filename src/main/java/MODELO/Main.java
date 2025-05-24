@@ -7,7 +7,7 @@ public class Main {
         Ciudad antigua = new Ciudad("Antigua Guatemala", 14.5596, -90.7343, 1530);
 
         // Imprimir ciudades
-        System.out.println("Probando clase Ciudad: CALROS CARLO CARLOS CARLOS CARLOSSSS");
+        System.out.println("Probando clase Ciudad: !!!!!!!!!!!!!!!!!!!!");
         System.out.println(guatemala);
         System.out.println(antigua);
 
@@ -16,4 +16,3 @@ public class Main {
         System.out.println("¿Guatemala es igual a su copia? " + guatemala.equals(copiaGuatemala));
     }
 }
-
