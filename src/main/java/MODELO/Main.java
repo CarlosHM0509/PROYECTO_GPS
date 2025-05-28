@@ -7,7 +7,7 @@ public class Main {
         Ciudad antigua = new Ciudad("Antigua Guatemala", 14.5596, -90.7343, 1530);
 
         // Imprimir ciudades
-        System.out.println("Probando clase Ciudad: prueba de merge a main 1 ");
+        System.out.println("Probando clase Ciudad:");
         System.out.println(guatemala);
         System.out.println(antigua);
 
