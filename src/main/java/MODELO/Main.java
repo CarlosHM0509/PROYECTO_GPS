@@ -1,18 +1,24 @@
 package MODELO;
 
+import java.util.List;
+
 public class Main {
     public static void main(String[] args) {
-        // Crear ciudades
-        Ciudad guatemala = new Ciudad("Ciudad de Guatemala", 14.6349, -90.5069, 1500);
-        Ciudad antigua = new Ciudad("Antigua Guatemala", 14.5596, -90.7343, 1530);
+        Mapa mapa = DatosDefault.cargarMapaBase();
 
-        // Imprimir ciudades
-        System.out.println("Probando clase Ciudad:");
-        System.out.println(guatemala);
-        System.out.println(antigua);
+        System.out.println("Grafo de ciudades:");
+        mapa.mostrarGrafo();
 
-        // Probar método equals
-        Ciudad copiaGuatemala = new Ciudad("Ciudad de Guatemala", 0, 0, 0);
-        System.out.println("¿Guatemala es igual a su copia? " + guatemala.equals(copiaGuatemala));
+        Ciudad origen = new Ciudad("Ciudad de Guatemala", 0, 0, 0);
+        Ciudad destino = new Ciudad("Puerto Barrios", 0, 0, 0);
+
+        System.out.println("\n¿Hay camino entre Guatemala y Puerto Barrios?: " + mapa.hayCamino(origen, destino));
+
+        System.out.println("\nRuta más corta de Guatemala a Puerto Barrios:");
+        List<Ciudad> ruta = mapa.dijkstra(origen, destino);
+        for (Ciudad ciudad : ruta) {
+            System.out.println(" - " + ciudad);
+        }
     }
 }
+
